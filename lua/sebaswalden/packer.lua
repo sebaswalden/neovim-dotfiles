@@ -21,7 +21,9 @@ return require('packer').startup(function(use)
 	use 'nvim-treesitter/playground'
 	use 'theprimeagen/harpoon'
 	use 'mbbill/undotree'
+  use 'preservim/nerdtree'
 	use 'tpope/vim-fugitive'
+  use 'tpope/vim-surround'
   use 'zivyangll/git-blame.vim'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -45,5 +47,4 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'}, -- Optional
 		}
 	}
-  use 'preservim/nerdtree'
 end)
