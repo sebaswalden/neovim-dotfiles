@@ -1,5 +1,6 @@
 require("sebaswalden.remap")
 require("sebaswalden.set")
+require("sebaswalden.statusline")
 
 vim.cmd [[
 let base16colorspace = 256

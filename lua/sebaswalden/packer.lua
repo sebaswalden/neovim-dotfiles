@@ -24,7 +24,11 @@ return require('packer').startup(function(use)
   use 'preservim/nerdtree'
 	use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
-  use 'zivyangll/git-blame.vim'
+  use 'github/copilot.vim'
+  use {
+    'lewis6991/gitsigns.nvim',
+    tag = 'release',
+  }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
