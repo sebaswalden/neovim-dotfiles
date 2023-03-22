@@ -9,7 +9,23 @@ lsp.ensure_installed({
 	'eslint',
 	'lua_ls',
 	'rust_analyzer',
+  'svelte',
 })
+
+local lspconfig = require'lspconfig'
+lspconfig.svelte.setup{
+  cmd = { "svelteserver", "--stdio" },
+  filetypes = { "svelte" },
+  root_dir = lspconfig.util.root_pattern("package.json", ".git"),
+  on_init = function(client)
+    if client.config.settings then
+      client.config.settings.svelte.plugin.enabled = true
+      client.config.settings.svelte.plugin.hover.enabled = true
+      client.config.settings.svelte.plugin.completions.enabled = true
+      client.config.settings.svelte.plugin.diagnostics.enabled = true
+    end
+  end
+}
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua_ls', {
