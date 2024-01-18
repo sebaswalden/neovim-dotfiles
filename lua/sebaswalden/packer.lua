@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use {
-		'chriskempson/base16-vim',
+		'tinted-theming/base16-vim',
 		config = function()
 			vim.cmd('colorscheme base16-default-dark')
 		end
@@ -25,10 +25,10 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
   use 'github/copilot.vim'
-  use {
-    'lewis6991/gitsigns.nvim',
-    tag = 'release',
-  }
+  use 'vim-crystal/vim-crystal'
+  use 'w0ng/vim-hybrid'
+  use 'MunifTanjim/nui.nvim'
+  use 'lewis6991/gitsigns.nvim'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
