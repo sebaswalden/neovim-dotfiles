@@ -10,7 +10,7 @@ lsp.ensure_installed({
 	'lua_ls',
 	'rust_analyzer',
   'svelte',
-  'lemminx'
+  'rubocop',
 })
 
 local lspconfig = require'lspconfig'
@@ -41,6 +41,11 @@ lsp.configure('lua_ls', {
 
 
 local cmp = require('cmp')
+cmp.setup {
+  sources = {
+    { name = "supermaven" },
+  }
+}
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
