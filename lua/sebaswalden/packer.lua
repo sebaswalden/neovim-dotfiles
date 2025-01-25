@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use {
-		'tinted-theming/base16-vim',
+		'tinted-theming/tinted-vim',
 		config = function()
 			vim.cmd('colorscheme base16-default-dark')
 		end
