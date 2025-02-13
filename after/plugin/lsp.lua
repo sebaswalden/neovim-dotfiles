@@ -5,7 +5,6 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-	'tsserver',
 	'eslint',
 	'lua_ls',
 	'rust_analyzer',
@@ -35,6 +34,15 @@ lsp.configure('lua_ls', {
             diagnostics = {
                 globals = { 'vim' }
             }
+        }
+    }
+})
+
+lsp.configure('eslint', {
+    settings = {
+        eslint = {
+            validate = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+            execArgv = { '--use-eslint-d' }
         }
     }
 })

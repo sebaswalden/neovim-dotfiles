@@ -35,6 +35,13 @@ return require('packer').startup(function(use)
       require("supermaven-nvim").setup({})
     end,
   }
+  use {
+    'nvimtools/none-ls.nvim',
+    requires = {
+      'nvimtools/none-ls-extras.nvim',
+      'nvim-lua/plenary.nvim'
+    }
+  }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',

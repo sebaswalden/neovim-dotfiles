@@ -3,7 +3,7 @@ require("sebaswalden.set")
 require("sebaswalden.statusline")
 
 vim.cmd [[
-let base16colorspace = 256
+let base16_colorspace = 256
 let NERDTreeShowHidden = 1
 ]]
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
